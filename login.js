@@ -43,20 +43,21 @@ function LogIn() {
 
             userfound = users[i]
             showDashboard = true
-            
+
             break
         }
 
     }
     if (userfound) {
         localStorage.setItem('userName', userfound.name)
-        localStorage.setItem('isloggedin', 'true')
+        localStorage.setItem('isLoggedIn', 'true');
+     
         welcomeBack();
         setTimeout(function () {
-            if(showDashboard){
-                 window.location.href = "dashboard.html";
+            if (showDashboard) {
+                window.location.href = "index.html";
             }
-           
+
         }, 1000)
 
     }

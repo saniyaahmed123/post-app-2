@@ -1,3 +1,7 @@
+// This runs the moment the page starts loading
+if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+}
 var currentUserName = localStorage.getItem('userName') || "Guest";
 var posts = document.getElementById('posts');
 var title = document.getElementById('title');
@@ -200,7 +204,7 @@ function logOut() {
     }).then(function (result) {
         if (result.isConfirmed) {
             localStorage.removeItem('isLoggedIn');
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         }
     });
 }
