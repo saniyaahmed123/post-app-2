@@ -1,0 +1,549 @@
+@font-face {
+    font-family: 'PostyFont';
+    src: url('font/early-quake-demo/Early\ Quake\ DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PostyFont';
+    src: url('font/early-quake-demo/Early\ Quake\ DEMO.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Default: Dark Mode */
+    --bg-body: #121212;
+    --bg-surface: #1E1E1E;
+    --bg-input: #2C2C2C;
+    --primary: #BB86FC;
+    --primary-hover: #D7B7FD;
+    --text-main: #FFFFFF;
+    --text-muted: #B0B0B0;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+    --bg-body: #F8F9FA;
+    --bg-surface: #FFFFFF;
+    --bg-input: #FFFFFF;
+    --primary: #6200EE;
+    --primary-hover: #3700B3;
+    --text-main: #121212;
+    --text-muted: #666666;
+    --border: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(98, 0, 238, 0.15);
+}
+.navbar {
+    background-color: var(--bg-surface);
+    border-radius: 33px;
+    /* Using a semi-transparent black */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    
+
+
+
+
+}
+.nav-cont{
+    background-color: #121212;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+    padding: 20px;
+
+}
+.card-body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+border-radius: 10px; 
+margin: 5px;}
+.bgimg{
+    width:80px;
+    height: 80px;
+}
+
+body {
+    background-color: var(--bg-body);
+}
+.navbar-brand {
+    font-family: 'PostyFont', sans-serif;
+    font-size: 2.9rem;
+    color: var(--primary) !important;
+}
+.btn1{
+background-color: var(--primary) !important;
+color: var(--bg-body) !important;
+font-weight: bold ;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 1.1rem;
+width: 100px;
+}
+.card{
+    background: var(--bg-surface);
+ 
+    border-radius: 13px;
+    /* 2. The Glass Effect (Blurs the background) */
+    backdrop-filter: blur(12px);
+    color: var(--text-main) !important;
+
+
+}
+.colorbox {
+    border: 1px solid rgba(255,255,255,0.1); /* light border so white boxes are visible */
+}
+
+.colorbox.selected {
+    outline: 3px solid var(--primary) !important;
+    outline-offset: 2px;
+    transform: scale(1.1);
+    z-index: 10;
+}
+input,textarea{
+    background-color: var(--bg-input) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius:10px !important  ;
+}
+input,textarea:focus{
+    background-color: var(--bg-input) !important;
+    color: var(--text-main) !important;
+    box-shadow: none !important;
+   border: none !important;
+}
+label{
+    color: var(--text-main) !important;
+
+}
+.selected{
+    border: 2px solid var(--primary) !important;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+input{
+    height: 50px;
+    color: var(--text-main) !important;
+
+}
+.post{
+    background-color: var(--primary) !important;
+    color: var(--bg-body) !important;
+    font-weight: bold ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    width: 120px;
+    border-radius: 10px !important;
+    
+
+}
+.user{
+    /* 1. Theme Variables */
+:root {
+    /* Default: Dark Mode */
+    --bg-body: #121212;
+    --bg-surface: #1E1E1E;
+    --bg-input: #2C2C2C;
+    --primary: #BB86FC;
+    --primary-hover: #D7B7FD;
+    --text-main: #FFFFFF;
+    --text-muted: #B0B0B0;
+    --border: #333333;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+    --bg-body: #F5F5F5;
+    --bg-surface: #FFFFFF;
+    --bg-input: #E0E0E0;
+    --primary: #6200EE;
+    --primary-hover: #3700B3;
+    --text-main: #121212;
+    --text-muted: #4F4F4F;
+    --border: #DDDDDD;
+    --shadow: rgba(111, 0, 255, 0.2);
+}
+
+/* 2. Base Styles */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+}
+
+/* 3. Navbar Sticky Fix */
+.nav-cont {
+    background-color: var(--bg-body); /* Change from #121212 to variable */
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+    padding: 20px;
+}
+}
+.form{
+    max-width: 400px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 10%;
+}
+.preview{
+    background-color: var(--primary) !important;
+    color: var(--bg-body) !important;
+    font-weight: bold ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    width: 120px;
+    border-radius: 10px !important;
+
+
+}
+.postheading{
+    color: var(--primary-hover) !important;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+a{
+    color: var(--text-main) !important;
+
+}
+/* Default Light Mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --btn-bg: #eeeeee;
+}
+
+/* Dark Mode Overrides */
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --btn-bg: #333333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s; /* Smooth fade between modes */
+}
+.logout{
+    width: 35px;
+    height: 35px;
+}
+button {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+#theme-toggle img{
+    width: 30px;
+    height: 30px;
+}
+#theme-toggle{
+    background: none;
+
+}
+/* 1. Font Face (Single declaration is enough) */
+@font-face {
+    font-family: 'PostyFont';
+    src: url('font/early-quake-demo/Early\ Quake\ DEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. Global Variables - Merged for consistency */
+:root {
+    --bg-body: #121212;
+    --bg-surface: #1E1E1E;
+    --bg-input: #2C2C2C;
+    --primary: #7594c9;
+    --primary-hover: #bed0ef;
+    --text-main: #FFFFFF;
+    --text-muted: #B0B0B0;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* For the button theme logic at the bottom */
+    --btn-bg: #333333;
+}
+
+[data-theme="light"], .light-theme {
+    --bg-body: #F8F9FA;
+    --bg-surface: #FFFFFF;
+    --bg-input: #FFFFFF;
+    --primary: #6200EE;
+    --primary-hover: #3700B3;
+    --text-main: #121212;
+    --text-muted: #666666;
+    --border: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(98, 0, 238, 0.15);
+    --btn-bg: #eeeeee;
+}
+
+/* 3. Base & Layout */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: var(--transition);
+    margin: 0;
+}
+
+.nav-cont {
+    background-color: var(--bg-body);
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: var(--bg-surface);
+    border-radius: 33px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.navbar-brand {
+    font-family: 'PostyFont', sans-serif;
+    font-size: 2.9rem;
+    color: var(--primary) !important;
+}
+
+/* 4. Components */
+.card {
+    background: var(--bg-surface);
+    border-radius: 13px;
+    backdrop-filter: blur(12px);
+    color: var(--text-main) !important;
+    border: 1px solid var(--border);
+}
+
+.card-body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* Unified Button Style based on your .post, .preview, and .btn1 */
+.btn1, .post, .preview {
+    background-color: var(--primary) !important;
+    color: var(--bg-body) !important;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    width: 120px;
+    border-radius: 10px !important;
+    border: none;
+    padding: 10px;
+}
+
+/* 5. Inputs & Form */
+input, textarea {
+    background-color: var(--bg-input) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    height: 50px;
+}
+
+input:focus, textarea:focus {
+    background-color: var(--bg-input) !important;
+    color: var(--text-main) !important;
+    box-shadow: none !important;
+    border: 1px solid var(--primary) !important; /* Changed from 'none' to 'primary' so user sees focus */
+}
+
+.form {
+    max-width: 400px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20%;
+    
+}
+
+/* 6. Utility */
+.selected {
+    border: 4px solid var(--primary) !important;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.postheading {
+    color: var(--primary-hover) !important;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle img {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    color: var(--text-main) !important;
+    text-decoration: none;
+}
+[data-theme="light"], .light-theme {
+    /* A soft, off-white grey instead of pure white */
+    --bg-body: #F0F2F5; 
+    
+    /* Slightly brighter than the body to create depth */
+    --bg-surface: #806655; 
+    
+    /* Inputs should be slightly darker to stand out on the surface */
+    --bg-input: #E4E6EB; 
+    
+    /* Soften the primary color so it doesn't vibrate against the light bg */
+    --primary: #5E17EB; 
+    --primary-hover: #4A11BA;
+    
+    /* Dark grey instead of pure black for text (reduces eye strain) */
+    --text-main: #1C1E21; 
+    --text-muted: #65676B;
+    
+    /* Subtle borders */
+    --border: rgba(0, 0, 0, 0.08);
+    --shadow: rgba(0, 0, 0, 0.06);
+    --btn-bg: #E4E6EB;
+}
+[data-theme="light"], .light-theme {
+    /* Warm, muted beige (Sand/Parchment) */
+    --bg-body: #E8E2D2; 
+    
+    /* Slightly lighter for cards to provide subtle lift */
+    --bg-surface: #F2EFE6; 
+    
+    /* Inputs are slightly darker/recessed */
+    --bg-input: #DBD3C0; 
+    
+    /* Muted deep purple or indigo for a classic look */
+    --primary: #c7e1f5; 
+    --primary-hover: #bed0ef;
+    
+    /* Deep charcoal-brown instead of black */
+    --text-main: #2D2926; 
+    --text-muted: #70675F;
+    
+    /* Warm borders and soft shadows */
+    --border: rgba(45, 41, 38, 0.1);
+    --shadow: rgba(45, 41, 38, 0.08);
+    --btn-bg: #DBD3C0;
+}[data-theme="light"], .light-theme {
+    /* 1. The "Base" - A deep, desaturated blue-grey */
+    --bg-body: #CBD5E1; 
+    
+    /* 2. The "Surface" - A slightly lighter slate to show depth */
+    --bg-surface: #E2E8F0; 
+    
+    /* 3. The "Inputs" - Recessed and easy to find */
+    --bg-input: #94A3B8; 
+    
+    /* 4. The "Primary" - A strong but deep navy */
+    --primary: #1E293B; 
+    --primary-hover: #334155;
+    
+    /* 5. The "Text" - High contrast but not white */
+    --text-main: #0F172A; 
+    --text-muted: #475569;
+    
+    /* 6. Subtle Borders & Shadows */
+    --border: rgba(15, 23, 42, 0.15);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --btn-bg: #94A3B8;
+}
+.postH{
+    font-size: 33px !important;
+}
+.postD{
+    font-size: 23px !important;
+}
+.font-dropdown {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.selected-font {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font-options {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    z-index: 500;
+    backdrop-filter: blur(15px);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.font-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.font-item:hover {
+    background-color: var(--primary);
+    color: var(--bg-body);
+}
+
+/* Toggle Class */
+.show {
+    display: block !important;
+}
+/* Styling the Select Box */
+.custom-dropdown {
+    background-color: var(--bg-input) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    height: 45px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.custom-dropdown:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(187, 134, 252, 0.25) !important;
+    outline: none;
+}
+
+/* Custom Arrow (Optional: ensures arrow is visible in dark mode) */
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+/* Light Theme Adjustments */
+[data-theme="light"] .form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23121212' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+p{
+    font-size:30px;
+}
