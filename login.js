@@ -54,7 +54,7 @@ function LogIn() {
         welcomeBack();
         setTimeout(function () {
             if(showDashboard){
-                 window.location.href = "index.html";
+                 window.location.href = "dashboard.html";
             }
            
         }, 1000)

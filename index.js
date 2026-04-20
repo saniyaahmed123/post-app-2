@@ -200,7 +200,7 @@ function logOut() {
     }).then(function (result) {
         if (result.isConfirmed) {
             localStorage.removeItem('isLoggedIn');
-            window.location.href = 'login.html';
+            window.location.href = 'index.html';
         }
     });
 }
